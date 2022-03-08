@@ -6,8 +6,7 @@ sum=0
 
 for num in {1000..2000};do
     if [[ $num =~ $pattern ]];then
-	sum=($sum+$num)
-	echo $sum;
+	sum=$((sum+num));
     fi;
 done
 

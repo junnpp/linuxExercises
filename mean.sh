@@ -1,6 +1,9 @@
 #!/bin/bash
 
-echo "usage: $0 <column> [file.csv]" 1>&2
+if [[ $# -ne 2 ]]; then
+  echo "usage: $0 <column> [file.csv]" 1>&2
+  exit 1
+fi
 
 column=$1
 file=$2
